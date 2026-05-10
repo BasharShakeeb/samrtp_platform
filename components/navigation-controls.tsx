@@ -8,7 +8,7 @@ export function NavigationControls() {
   const router = useRouter()
 
   return (
-    <div className="fixed top-20 left-4 z-[60] flex items-center gap-2 md:top-4">
+    <div data-nav-controls className="fixed top-20 left-4 z-[60] flex items-center gap-2 md:top-4">
       <Button
         variant="outline"
         size="icon"

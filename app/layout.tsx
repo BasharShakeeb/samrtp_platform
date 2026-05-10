@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Cairo } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import { NavigationControls } from '@/components/navigation-controls'
+
 import './globals.css'
 
 const cairo = Cairo({
@@ -33,16 +33,24 @@ export const metadata: Metadata = {
   },
 }
 
+import { ThemeProvider } from "@/components/theme-provider"
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ar" dir="rtl" className="bg-background">
-      <body className={`${cairo.variable} font-sans antialiased`}>
-        <NavigationControls />
-        {children}
+    <html lang="ar" dir="rtl" suppressHydrationWarning>
+      <body className={`${cairo.variable} font-sans antialiased bg-background text-foreground transition-colors duration-300`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

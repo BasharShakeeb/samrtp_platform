@@ -1,0 +1,85 @@
+# مساعد PDF الذكي | رؤية 2030
+
+
+## مستندك الذكي
+للذكاء الاصطناعي
+- [الرئيسية](http://localhost:3000/dashboard)
+- [مستنداتي](http://localhost:3000/dashboard/documents)
+- [المحادثات](http://localhost:3000/dashboard/chat)
+- [المفضلة](http://localhost:3000/dashboard/favorites)
+- [مشاركاتي](http://localhost:3000/dashboard/shared)
+- [سجل الأسئلة](http://localhost:3000/dashboard/questions)
+- [الإعدادات](http://localhost:3000/dashboard/settings)
+[الرئيسية](http://localhost:3000/dashboard)
+[مستنداتي](http://localhost:3000/dashboard/documents)
+[المحادثات](http://localhost:3000/dashboard/chat)
+[المفضلة](http://localhost:3000/dashboard/favorites)
+[مشاركاتي](http://localhost:3000/dashboard/shared)
+[سجل الأسئلة](http://localhost:3000/dashboard/questions)
+[الإعدادات](http://localhost:3000/dashboard/settings)
+الخطة الحالية
+الخطة المجانية
+0 / 5 ملفات
+[تسجيل الخروج](http://localhost:3000/)
+مرحبا أحمد
+أحمد@example.com
+المملكة العربية السعودية
+KINGDOM OF SAUDI ARABIA
+رفع ملف PDF هنا
+أو اسحب وألقت الملف
+الحد الأقصى لحجم الملف 50 ميجابايت
+
+# مرحبًا بك في مستندك الذكي
+ارفع ملفات PDF واسأل أي سؤال عن محتواهاواحصل على إجابات دقيقة وسريعة بالذكاء الاصطناعي
+[مشاركاتيالملفات التي قمت بمشاركتها](http://localhost:3000/dashboard/shared)
+
+### مشاركاتي
+الملفات التي قمت بمشاركتها
+[مستنداتيإدارة وعرض جميع ملفاتك](http://localhost:3000/dashboard/documents)
+
+### مستنداتي
+إدارة وعرض جميع ملفاتك
+[المفضلةعرض الأسئلة والمحتوى المحفوظ](http://localhost:3000/dashboard/favorites)
+
+### المفضلة
+عرض الأسئلة والمحتوى المحفوظ
+[بدء محادثة جديدةاسأل أي سؤال عن محتوى ملفاتك](http://localhost:3000/dashboard/chat)
+
+### بدء محادثة جديدة
+اسأل أي سؤال عن محتوى ملفاتك
+
+## المستندات الأخيرة
+[عرض الكل](http://localhost:3000/dashboard/documents)
+استراتيجية التحول الرقمي 2030.pdf
+45 صفحة
+اليوم
+10:30 ص
+اللائحة التنفيذية لنظام العمل.pdf
+120 صفحة
+أمس
+04:15 م
+تقرير اداء الربع الأول 2024.pdf
+32 صفحة
+2024/05/20
+09:20 ص
+السياسات والإجراءات المالية.pdf
+78 صفحة
+2024/05/18
+11:45 ص
+
+## ملخص استخدامك
+28
+محادثة
+هذا الشهر
+7
+ملفات
+تم رفعها
+156
+سؤال
+هذا الشهر
+12
+ساعات
+تم توفيرها
+
+### نصيحة
+يمكنك تحسين دقة الإجابات من خلال طرح أسئلة محددة والإشارة إلى أجزاء معينة في المستند.
