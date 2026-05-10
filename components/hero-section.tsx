@@ -42,8 +42,15 @@ export function HeroSection() {
               استخدم قوة الذكاء الاصطناعي لفهم وتحليل مستنداتك بسرعة ودقة. اطرح أسئلتك واحصل على إجابات فورية من ملفاتك.
             </p>
 
-            {/* Spacer to maintain layout instead of CTA Buttons */}
-            <div className="h-[60px]" />
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button asChild size="lg" className="h-14 px-10 text-lg font-bold rounded-2xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">
+                <Link href="/dashboard">
+                  اكتشف المميزات
+                  <MessageSquare className="mr-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
 
             {/* Stats */}
             <div className="flex flex-wrap gap-8 mt-12 justify-center lg:justify-start">
@@ -55,7 +62,7 @@ export function HeroSection() {
                 <div className="text-3xl font-black text-secondary mb-1">+1M</div>
                 <div className="text-sm font-medium text-foreground/80">ملف تم تحليله</div>
               </div>
-              <div className="text-center bg-background/60 dark:bg-background/40 backdrop-blur-md px-6 py-4 rounded-2xl border border-border/50 shadow-lg">صنع "تدرج
+              <div className="text-center bg-background/60 dark:bg-background/40 backdrop-blur-md px-6 py-4 rounded-2xl border border-border/50 shadow-lg">
                 <div className="text-3xl font-black text-primary mb-1">99%</div>
                 <div className="text-sm font-medium text-foreground/80">دقة التحليل</div>
               </div>
