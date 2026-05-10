@@ -176,32 +176,11 @@ export default function LoginPage() {
         <div className="absolute inset-0 bg-gradient-to-l from-[#1a365d]/80 via-[#1a365d]/60 to-transparent" />
 
         {/* Content Overlay */}
-        <div className="relative z-10 h-full flex flex-col justify-between p-10">
-          {/* Vision 2030 Logo - Small and Professional */}
-          <div className="flex justify-end">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20">
-              <div className="flex flex-col items-center">
-                <div className="flex items-center gap-1 text-white/90 text-xs mb-1">
-                  <span>رؤيـــة</span>
-                  <span className="tracking-wide">VISION</span>
-                </div>
-                <div className="flex items-center text-2xl font-bold tracking-tight">
-                  <span className="text-[#1a9d49]">2</span>
-                  <span className="text-white">0</span>
-                  <span className="text-[#1a9d49]">3</span>
-                  <span className="text-white">0</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="relative z-10 h-full flex flex-col items-center justify-end p-10 pb-20">
 
           {/* Center Content */}
           <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 border border-white/30">
-              <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-              </svg>
-            </div>
+
             <p className="text-white/90 text-xl mb-2">مرحبًا بك في</p>
             <h1 className="text-white text-5xl font-bold mb-6">مستندك الذكي</h1>
             <p className="text-white/80 text-lg leading-relaxed max-w-md">
@@ -213,38 +192,6 @@ export default function LoginPage() {
             </p>
           </div>
 
-          {/* Feature Cards */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-6 h-6 text-[#1a9d49]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3 className="text-white font-semibold mb-1">فهم أعمق</h3>
-                <p className="text-white/60 text-xs">حلل محتوى مستنداتك بذكاء</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-6 h-6 text-[#1a9d49]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-white font-semibold mb-1">إجابات سريعة</h3>
-                <p className="text-white/60 text-xs">احصل على إجابات دقيقة في ثوان</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-6 h-6 text-[#1a9d49]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-white font-semibold mb-1">آمن وموثوق</h3>
-                <p className="text-white/60 text-xs">حماية بياناتك بأعلى المعايير</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
