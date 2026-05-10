@@ -98,16 +98,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-background/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-background/50 text-sm">
-            © 2024 مساعد PDF الذكي. جميع الحقوق محفوظة
-          </p>
-          <div className="flex items-center gap-2">
-            <span className="text-background/50 text-sm">مستوحى من</span>
-            <span className="text-secondary font-bold">رؤية 2030</span>
-          </div>
-        </div>
       </div>
     </footer>
   )

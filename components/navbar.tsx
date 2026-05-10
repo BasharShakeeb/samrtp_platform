@@ -35,7 +35,7 @@ export function Navbar() {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" className="text-foreground hover:bg-muted" asChild>
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
               <Link href="/login">تسجيل الدخول</Link>
             </Button>
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
@@ -71,7 +71,7 @@ export function Navbar() {
               رؤية 2030
             </a>
             <div className="flex flex-col gap-3 pt-4 border-t border-border">
-              <Button variant="ghost" className="w-full justify-center" asChild>
+              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
                 <Link href="/login">تسجيل الدخول</Link>
               </Button>
               <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" asChild>

@@ -11,8 +11,10 @@ export default function DashboardLayout({
 
   return (
     <div className="flex h-screen bg-[#f4f6f9] dark:bg-[#0f172a] overflow-hidden transition-colors duration-300" dir="rtl">
-      {/* Sidebar */}
-      <DashboardSidebar />
+      {/* Sidebar - Hidden on Mobile */}
+      <div className="hidden lg:flex shrink-0">
+        <DashboardSidebar />
+      </div>
 
       {/* Main Content Area */}
       <div className="flex flex-col flex-1 overflow-hidden">

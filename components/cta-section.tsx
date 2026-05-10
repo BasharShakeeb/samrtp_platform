@@ -35,16 +35,18 @@ export function CTASection() {
           >
             <Link href="/register">
               <Upload className="w-5 h-5" />
-              جرّب مجاناً الآن
+              أنشئ حسابك مجاناً
             </Link>
           </Button>
           <Button
             size="lg"
-            variant="outline"
-            className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 gap-2 px-8 py-6 text-lg rounded-xl transition-all"
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 gap-2 px-8 py-6 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all"
+            asChild
           >
-            تعرف على المزيد
-            <ArrowLeft className="w-5 h-5" />
+            <a href="#features">
+              اكتشف المميزات
+              <ArrowLeft className="w-5 h-5" />
+            </a>
           </Button>
         </div>
 

@@ -21,7 +21,7 @@ import {
   Sparkles,
 } from "lucide-react"
 
-const menuItems = [
+export const menuItems = [
   { label: "الرئيسية", icon: Home, href: "/dashboard", badge: null },
   { label: "مستنداتي", icon: FileText, href: "/dashboard/documents", badge: "7" },
   { label: "المحادثات", icon: MessageCircle, href: "/dashboard/chat", badge: "3" },
@@ -40,27 +40,27 @@ export function DashboardSidebar() {
     <motion.aside
       animate={{ width: collapsed ? 78 : 260 }}
       transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-      className="relative flex flex-col bg-white dark:bg-[#1e293b] border-l border-[#e8ecf1] dark:border-slate-800 shrink-0 overflow-hidden transition-colors duration-300"
+      className="relative flex flex-col bg-white dark:bg-card border-l border-[#e8ecf1] dark:border-border shrink-0 transition-colors duration-300"
     >
       {/* Collapse toggle */}
       <motion.button
         whileHover={{ scale: 1.15 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setCollapsed(!collapsed)}
-        className="absolute -left-3 top-20 z-10 w-6 h-6 bg-white dark:bg-slate-800 border border-[#e0e4ea] dark:border-slate-700
+        className="absolute -left-3 top-20 z-10 w-6 h-6 bg-white dark:bg-muted border border-[#e0e4ea] dark:border-border
                    rounded-full flex items-center justify-center shadow-sm
-                   hover:bg-[#f0f2f5] dark:hover:bg-slate-700 hover:border-[#006C35]/30 transition-colors"
+                   hover:bg-[#f0f2f5] dark:hover:bg-muted hover:border-[#006C35]/30 transition-colors"
         aria-label={collapsed ? "توسيع القائمة" : "طي القائمة"}
       >
         {collapsed ? (
-          <ChevronRight className="w-3.5 h-3.5 text-[#6b7280] dark:text-slate-400" />
+          <ChevronRight className="w-3.5 h-3.5 text-[#6b7280] dark:text-muted-foreground" />
         ) : (
-          <ChevronLeft className="w-3.5 h-3.5 text-[#6b7280] dark:text-slate-400" />
+          <ChevronLeft className="w-3.5 h-3.5 text-[#6b7280] dark:text-muted-foreground" />
         )}
       </motion.button>
 
       {/* Logo Section */}
-      <div className="flex items-center gap-3 px-5 pt-6 pb-5 border-b border-[#e8ecf1] dark:border-slate-800 transition-colors duration-300">
+      <div className="flex items-center gap-3 px-5 pt-6 pb-5 border-b border-[#e8ecf1] dark:border-border transition-colors duration-300">
         <motion.div
           whileHover={{ rotate: [0, -10, 10, 0] }}
           transition={{ duration: 0.5 }}
@@ -78,12 +78,12 @@ export function DashboardSidebar() {
               transition={{ duration: 0.2 }}
               className="overflow-hidden"
             >
-              <h2 className="text-[15px] font-bold text-[#1a202c] dark:text-slate-200 leading-tight whitespace-nowrap">
+              <h2 className="text-[15px] font-bold text-[#1a202c] dark:text-foreground leading-tight whitespace-nowrap">
                 مستندك الذكي
               </h2>
               <div className="flex items-center gap-1.5">
                 <Sparkles className="w-3 h-3 text-[#00A651]" />
-                <p className="text-[11px] text-[#9ca3af] dark:text-slate-400 leading-tight whitespace-nowrap">
+                <p className="text-[11px] text-[#9ca3af] dark:text-muted-foreground leading-tight whitespace-nowrap">
                   مساعدك الذكي بالذكاء الاصطناعي
                 </p>
               </div>
@@ -115,7 +115,7 @@ export function DashboardSidebar() {
                     ${
                       isActive
                         ? "bg-gradient-to-l from-[#006C35]/12 to-[#006C35]/5 dark:from-[#006C35]/20 dark:to-transparent text-[#006C35] dark:text-[#34d399] font-semibold shadow-sm"
-                        : "text-[#6b7280] dark:text-slate-400 hover:bg-[#f4f6f9] dark:hover:bg-slate-800/50 hover:text-[#374151] dark:hover:text-slate-200"
+                        : "text-[#6b7280] dark:text-muted-foreground hover:bg-[#f4f6f9] dark:hover:bg-muted/50 hover:text-[#374151] dark:hover:text-foreground"
                     }
                   `}
                 >
@@ -138,7 +138,7 @@ export function DashboardSidebar() {
                       className={`w-5 h-5 shrink-0 transition-colors ${
                         isActive
                           ? "text-[#006C35] dark:text-[#34d399]"
-                          : "text-[#9ca3af] dark:text-slate-500 group-hover:text-[#6b7280] dark:group-hover:text-slate-300"
+                          : "text-[#9ca3af] dark:text-muted-foreground/70 group-hover:text-[#6b7280] dark:group-hover:text-slate-300"
                       }`}
                     />
                   </motion.div>
@@ -200,11 +200,11 @@ export function DashboardSidebar() {
             <div className="absolute -top-3 -left-3 w-12 h-12 bg-[#006C35]/5 dark:bg-[#006C35]/20 rounded-full" />
             <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-[#00A651]/5 dark:bg-[#00A651]/20 rounded-full" />
 
-            <p className="text-[11px] text-[#6b7280] dark:text-slate-400 mb-1 relative z-10">الخطة الحالية</p>
-            <p className="text-[14px] font-bold text-[#1a202c] dark:text-slate-200 mb-2 relative z-10">الخطة المجانية</p>
+            <p className="text-[11px] text-[#6b7280] dark:text-muted-foreground mb-1 relative z-10">الخطة الحالية</p>
+            <p className="text-[14px] font-bold text-[#1a202c] dark:text-foreground mb-2 relative z-10">الخطة المجانية</p>
 
             {/* Usage bar */}
-            <div className="w-full h-2 bg-[#d1e7dd] dark:bg-slate-700 rounded-full mb-1.5 overflow-hidden relative z-10">
+            <div className="w-full h-2 bg-[#d1e7dd] dark:bg-muted rounded-full mb-1.5 overflow-hidden relative z-10">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: "40%" }}
@@ -212,7 +212,7 @@ export function DashboardSidebar() {
                 className="h-full bg-gradient-to-l from-[#006C35] to-[#00A651] rounded-full"
               />
             </div>
-            <p className="text-[11px] text-[#9ca3af] dark:text-slate-400 mb-3 relative z-10">2 / 5 ملفات</p>
+            <p className="text-[11px] text-[#9ca3af] dark:text-muted-foreground mb-3 relative z-10">2 / 5 ملفات</p>
 
             <motion.button
               whileHover={{ scale: 1.02, y: -1 }}
@@ -246,7 +246,7 @@ export function DashboardSidebar() {
       )}
 
       {/* Logout */}
-      <div className="border-t border-[#e8ecf1] dark:border-slate-800 px-3 py-3 transition-colors duration-300">
+      <div className="border-t border-[#e8ecf1] dark:border-border px-3 py-3 transition-colors duration-300">
         <motion.button
           whileHover={{ x: -4 }}
           onClick={() => window.location.href = "/"}
