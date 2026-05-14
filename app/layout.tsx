@@ -35,6 +35,8 @@ export const metadata: Metadata = {
 
 import { ThemeProvider } from "@/components/theme-provider"
 
+import { I18nProvider } from "@/components/i18n-provider"
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,14 +45,16 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <body className={`${cairo.variable} font-sans antialiased bg-background text-foreground transition-colors duration-300`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <I18nProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </I18nProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

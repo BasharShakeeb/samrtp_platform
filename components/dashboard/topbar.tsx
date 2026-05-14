@@ -289,17 +289,7 @@ export function DashboardTopbar() {
           </motion.button>
         )}
 
-        {/* Language toggle */}
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-xl
-                     hover:bg-[#f4f6f9] dark:hover:bg-muted transition-colors text-[#6b7280] dark:text-muted-foreground"
-          title="تبديل اللغة"
-        >
-          <Globe className="w-4 h-4" />
-          <span className="text-[12px] font-medium">عربي</span>
-        </motion.button>
+
 
         {/* Vision 2030 branding */}
         <div className="flex items-center gap-2">
