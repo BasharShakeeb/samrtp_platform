@@ -4,9 +4,11 @@ import { Upload, MessageSquare, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { useTranslation } from "react-i18next"
 import { SaudiSkyline } from "./saudi-skyline"
 
 export function HeroSection() {
+  const { t } = useTranslation()
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
       {/* Desktop Background Image (Hidden on Mobile) */}
@@ -41,21 +43,21 @@ export function HeroSection() {
             <div className="h-[20px] lg:h-[36px] mb-4 lg:mb-8" />
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 drop-shadow-sm">
-              <span className="text-primary">مساعدك الذكي</span>
+              <span className="text-primary">{t('landing_title_highlight')}</span>
               <br />
-              لتحليل ملفات PDF
+              {t('landing_title_main')}
             </h1>
 
             <p className="text-lg sm:text-xl text-foreground/80 dark:text-muted-foreground leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 lg:mr-0 font-medium drop-shadow-sm">
-              استخدم قوة الذكاء الاصطناعي لفهم وتحليل مستنداتك بسرعة ودقة. اطرح أسئلتك واحصل على إجابات فورية من ملفاتك.
+              {t('landing_subtitle')}
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="h-14 px-10 text-lg font-bold rounded-2xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">
                 <Link href="/dashboard">
-                  اكتشف المميزات
-                  <MessageSquare className="mr-2 h-5 w-5" />
+                  {t('landing_cta')}
+                  <MessageSquare className="mx-2 h-5 w-5 rtl:ml-2 rtl:mr-0 ltr:mr-2 ltr:ml-0" />
                 </Link>
               </Button>
             </div>
@@ -64,15 +66,15 @@ export function HeroSection() {
             <div className="flex flex-wrap gap-4 sm:gap-8 mt-12 justify-center lg:justify-start">
               <div className="text-center bg-background/80 dark:bg-background/60 backdrop-blur-md px-4 sm:px-6 py-4 rounded-2xl border border-border/50 shadow-lg flex-1 sm:flex-none min-w-[120px]">
                 <div className="text-2xl sm:text-3xl font-black text-primary mb-1">+50K</div>
-                <div className="text-xs sm:text-sm font-medium text-foreground/80">مستخدم نشط</div>
+                <div className="text-xs sm:text-sm font-medium text-foreground/80">{t('stat_users')}</div>
               </div>
               <div className="text-center bg-background/80 dark:bg-background/60 backdrop-blur-md px-4 sm:px-6 py-4 rounded-2xl border border-border/50 shadow-lg flex-1 sm:flex-none min-w-[120px]">
                 <div className="text-2xl sm:text-3xl font-black text-secondary mb-1">+1M</div>
-                <div className="text-xs sm:text-sm font-medium text-foreground/80">ملف تم تحليله</div>
+                <div className="text-xs sm:text-sm font-medium text-foreground/80">{t('stat_files')}</div>
               </div>
               <div className="text-center bg-background/80 dark:bg-background/60 backdrop-blur-md px-4 sm:px-6 py-4 rounded-2xl border border-border/50 shadow-lg flex-1 sm:flex-none min-w-[120px]">
                 <div className="text-2xl sm:text-3xl font-black text-primary mb-1">99%</div>
-                <div className="text-xs sm:text-sm font-medium text-foreground/80">دقة التحليل</div>
+                <div className="text-xs sm:text-sm font-medium text-foreground/80">{t('stat_accuracy')}</div>
               </div>
             </div>
           </div>

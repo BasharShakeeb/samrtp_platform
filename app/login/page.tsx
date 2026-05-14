@@ -39,7 +39,7 @@ export default function LoginPage() {
                 <div className="relative group">
                   <Input
                     type="email"
-                    placeholder="email@domain.com"
+                    placeholder={t('email_placeholder')}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="h-14 pr-14 pl-15  bg-gray-50/50 border-gray-200 rounded-2xl focus:ring-2 focus:ring-[#1a9d49]/20 focus:border-[#1a9d49] focus:bg-white transition-all text-base"
@@ -59,7 +59,7 @@ export default function LoginPage() {
                 <div className="relative group">
                   <Input
                     type="password"
-                    placeholder="أدخل كلمة المرور"
+                    placeholder={t('password_placeholder')}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="h-14 pr-15 pl-5 bg-gray-50/50 border-gray-200 rounded-2xl focus:ring-2 focus:ring-[#1a9d49]/20 focus:border-[#1a9d49] focus:bg-white transition-all text-base"

@@ -7,8 +7,10 @@ import { Mail, Lock, User, Eye, EyeOff } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
+import { useTranslation } from "react-i18next"
 
 export default function RegisterPage() {
+  const { t } = useTranslation()
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -24,7 +26,7 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen flex bg-[#F0FFF0]" dir="rtl">
+    <div className="min-h-screen flex bg-[#F0FFF0]">
       {/* Left Side - Registration Form */}
       <div className="w-full lg:w-[45%] flex flex-col min-h-screen bg-[#F0FFF0]">
         {/* Logo */}
@@ -39,8 +41,8 @@ export default function RegisterPage() {
               </svg>
             </div>
             <div>
-              <h1 className="text-lg font-bold text-[#1a365d]">مستندك الذكي</h1>
-              <p className="text-xs text-muted-foreground">للذكاء الاصطناعي</p>
+              <h1 className="text-lg font-bold text-[#1a365d]">{t('nav_brand')}</h1>
+              <p className="text-xs text-muted-foreground">{t('ai_subtitle')}</p>
             </div>
           </div>
         </div>
@@ -51,10 +53,10 @@ export default function RegisterPage() {
             {/* Header */}
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-[#1a365d] mb-3">
-                إنشاء حساب جديد
+                {t('register_title')}
               </h2>
               <p className="text-muted-foreground text-sm">
-                انضم إلينا وابدأ رحلتك الذكية مع مستنداتك
+                {t('register_subtitle')}
               </p>
             </div>
 
@@ -63,12 +65,12 @@ export default function RegisterPage() {
               {/* Full Name Field */}
               <div className="space-y-2">
                 <label className="text-sm font-medium text-[#1a365d]">
-                  الاسم الكامل
+                  {t('full_name')}
                 </label>
                 <div className="relative">
                   <Input
                     type="text"
-                    placeholder="أدخل اسمك الكامل"
+                    placeholder={t('full_name_placeholder')}
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     className="h-12 pr-12 pl-4 bg-white border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
@@ -80,12 +82,12 @@ export default function RegisterPage() {
               {/* Email Field */}
               <div className="space-y-2">
                 <label className="text-sm font-medium text-[#1a365d]">
-                  البريد الإلكتروني
+                  {t('email')}
                 </label>
                 <div className="relative">
                   <Input
                     type="email"
-                    placeholder="أدخل بريدك الإلكتروني"
+                    placeholder={t('email_placeholder')}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="h-12 pr-12 pl-4 bg-white border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
@@ -98,12 +100,12 @@ export default function RegisterPage() {
               {/* Password Field */}
               <div className="space-y-2">
                 <label className="text-sm font-medium text-[#1a365d]">
-                  كلمة المرور
+                  {t('password')}
                 </label>
                 <div className="relative">
                   <Input
                     type={showPassword ? "text" : "password"}
-                    placeholder="أدخل كلمة المرور"
+                    placeholder={t('password_placeholder')}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="h-12 pr-12 pl-12 bg-white border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
@@ -122,12 +124,12 @@ export default function RegisterPage() {
               {/* Confirm Password Field */}
               <div className="space-y-2">
                 <label className="text-sm font-medium text-[#1a365d]">
-                  تأكيد كلمة المرور
+                  {t('confirm_password')}
                 </label>
                 <div className="relative">
                   <Input
                     type={showConfirmPassword ? "text" : "password"}
-                    placeholder="أعد إدخال كلمة المرور"
+                    placeholder={t('confirm_password_placeholder')}
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     className="h-12 pr-12 pl-12 bg-white border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
@@ -152,13 +154,13 @@ export default function RegisterPage() {
                   className="border-gray-300 data-[state=checked]:bg-[#1a365d] data-[state=checked]:border-[#1a365d]"
                 />
                 <label htmlFor="terms" className="text-sm text-muted-foreground cursor-pointer">
-                  أوافق على{" "}
+                  {t('agree_to')}
                   <Link href="/terms" className="text-[#1a9d49] hover:underline">
-                    الشروط والأحكام
+                    {t('terms')}
                   </Link>
-                  {" "}و{" "}
+                  {t('and')}
                   <Link href="/privacy" className="text-[#1a9d49] hover:underline">
-                    سياسة الخصوصية
+                    {t('privacy')}
                   </Link>
                 </label>
               </div>
@@ -169,18 +171,18 @@ export default function RegisterPage() {
                 disabled={!agreeToTerms}
                 className="w-full h-12 bg-[#1a365d] hover:bg-[#1a365d]/90 text-white font-medium rounded-xl transition-all text-base disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                إنشاء حساب
+                {t('register_btn')}
               </Button>
 
               {/* Login Link */}
               <div className="text-center pt-4">
-                <span className="text-muted-foreground">لديك حساب بالفعل؟</span>
+                <span className="text-muted-foreground">{t('have_account')}</span>
                 {" "}
                 <Link
                   href="/login"
                   className="text-[#1a9d49] font-medium hover:text-[#1a9d49]/80 transition-colors"
                 >
-                  تسجيل الدخول
+                  {t('login_link')}
                 </Link>
               </div>
             </form>
@@ -207,14 +209,10 @@ export default function RegisterPage() {
           {/* Center Content */}
           <div className="flex flex-col items-center text-center">
 
-            <p className="text-white/90 text-xl mb-2">مرحبًا بك في</p>
-            <h1 className="text-white text-5xl font-bold mb-6">مستندك الذكي</h1>
-            <p className="text-white/80 text-lg leading-relaxed max-w-md">
-              منصة ذكية تتيح لك رفع ملفات PDF
-              <br />
-              والحصول على إجابات دقيقة وسريعة
-              <br />
-              باستخدام الذكاء الاصطناعي
+            <p className="text-white/90 text-xl mb-2">{t('hero_welcome')}</p>
+            <h1 className="text-white text-5xl font-bold mb-6">{t('hero_title')}</h1>
+            <p className="text-white/80 text-lg leading-relaxed max-w-md whitespace-pre-line">
+              {t('hero_desc')}
             </p>
           </div>
 
