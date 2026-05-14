@@ -145,7 +145,7 @@ export default function DocumentsPage() {
                   <span className={`font-black text-red-500 tracking-wide ${viewMode === "grid" ? "text-[12px]" : "text-[10px]"}`}>PDF</span>
                 </div>
                 {viewMode === "grid" && (
-                  <div className="opacity-0 group-hover:opacity-100 transition-all">
+                  <div className="transition-all">
                     <DocumentMenu />
                   </div>
                 )}

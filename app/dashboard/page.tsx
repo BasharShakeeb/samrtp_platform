@@ -119,8 +119,8 @@ export default function DashboardPage() {
                   onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}
                   onClick={() => fileInputRef.current?.click()}
                   className={`flex flex-col items-center justify-center border-2 border-dashed rounded-2xl py-8 px-6 cursor-pointer transition-all duration-300
-                    ${isDragOver 
-                      ? "border-[#006C35] dark:border-[#34d399] bg-[#006C35]/5 dark:bg-[#006C35]/20 scale-[1.03] shadow-lg shadow-[#006C35]/10" 
+                    ${isDragOver
+                      ? "border-[#006C35] dark:border-[#34d399] bg-[#006C35]/5 dark:bg-[#006C35]/20 scale-[1.03] shadow-lg shadow-[#006C35]/10"
                       : "border-[#d1d5db] dark:border-border hover:border-[#006C35]/40 dark:hover:border-[#34d399]/40 hover:bg-[#f0faf4] dark:hover:bg-muted hover:shadow-md"}`}
                 >
                   <motion.div animate={isDragOver ? { scale: 1.2, rotate: 5 } : { scale: 1, rotate: 0 }}
@@ -286,7 +286,7 @@ export default function DashboardPage() {
                   <p className="text-[12px] text-[#6b7280] dark:text-muted-foreground">{doc.date}</p>
                   <p className="text-[11px] text-[#d1d5db] dark:text-muted-foreground/70">{doc.time}</p>
                 </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="transition-opacity">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <button className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-muted dark:hover:bg-slate-800 outline-none">
