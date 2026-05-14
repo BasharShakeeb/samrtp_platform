@@ -46,7 +46,7 @@ export default function RegisterPage() {
         </div>
 
         {/* Form Container */}
-        <div className="flex-1 flex items-center justify-center px-8 lg:px-12">
+        <div className="flex-1 flex items-center justify-center px-4 sm:px-8 lg:px-12 py-6">
           <div className="w-full max-w-md">
             {/* Header */}
             <div className="mb-8">

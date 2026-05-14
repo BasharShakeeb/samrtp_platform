@@ -17,8 +17,8 @@ export default function LoginPage() {
       {/* Right Side - Login Form (appears on right in RTL) */}
       <div className="w-full lg:w-[45%] flex flex-col min-h-screen bg-[#F0FFF0] relative z-10">
         {/* Form Container */}
-        <div className="flex-1 flex items-center justify-center px-8 lg:px-16">
-          <div className="w-full max-w-md">
+        <div className="flex-1 flex items-center justify-center px-4 sm:px-8 lg:px-16">
+          <div className="w-full max-w-md mt-6 lg:mt-0">
             {/* Header */}
             <div className="mb-10">
               <h2 className="text-4xl font-bold text-[#1a365d] mb-4">
@@ -101,7 +101,7 @@ export default function LoginPage() {
               </div>
 
               {/* Social Login */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Button
                   type="button"
                   variant="outline"

@@ -9,8 +9,8 @@ import { SaudiSkyline } from "./saudi-skyline"
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
-      {/* Full Background Image */}
-      <div className="absolute inset-0 z-0">
+      {/* Desktop Background Image (Hidden on Mobile) */}
+      <div className="absolute inset-0 z-0 hidden lg:block">
         <Image
           src="/laptop.png"
           alt="Smart PDF Dashboard Background"
@@ -18,19 +18,27 @@ export function HeroSection() {
           className="object-cover object-center"
           priority
         />
-        {/* Gradient Overlay: Transparent on the left (photo side) fading to solid on the right (text side) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-background/20 to-background/50 dark:from-transparent dark:via-background/50 dark:to-background/20" />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-background/20 to-background/80 dark:from-transparent dark:via-background/50 dark:to-background/90" />
       </div>
 
-      {/* Decorative floating badge */}
-
-
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl lg:ml-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          
+          {/* Mobile Image (Visible only on mobile/tablet) */}
+          <div className="w-full lg:hidden relative h-[250px] sm:h-[400px] rounded-3xl overflow-hidden shadow-xl mt-4">
+            <Image
+              src="/laptop.png"
+              alt="Smart PDF Dashboard Background"
+              fill
+              className="object-cover object-center"
+              priority
+            />
+          </div>
+
           {/* Content */}
-          <div className="text-center lg:text-right">
-            {/* Spacer to maintain layout instead of the badge */}
-            <div className="h-[36px] mb-8" />
+          <div className="w-full lg:w-[55%] lg:ml-auto text-center lg:text-right">
+            <div className="h-[20px] lg:h-[36px] mb-4 lg:mb-8" />
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 drop-shadow-sm">
               <span className="text-primary">مساعدك الذكي</span>
@@ -53,18 +61,18 @@ export function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-8 mt-12 justify-center lg:justify-start">
-              <div className="text-center bg-background/60 dark:bg-background/40 backdrop-blur-md px-6 py-4 rounded-2xl border border-border/50 shadow-lg">
-                <div className="text-3xl font-black text-primary mb-1">+50K</div>
-                <div className="text-sm font-medium text-foreground/80">مستخدم نشط</div>
+            <div className="flex flex-wrap gap-4 sm:gap-8 mt-12 justify-center lg:justify-start">
+              <div className="text-center bg-background/80 dark:bg-background/60 backdrop-blur-md px-4 sm:px-6 py-4 rounded-2xl border border-border/50 shadow-lg flex-1 sm:flex-none min-w-[120px]">
+                <div className="text-2xl sm:text-3xl font-black text-primary mb-1">+50K</div>
+                <div className="text-xs sm:text-sm font-medium text-foreground/80">مستخدم نشط</div>
               </div>
-              <div className="text-center bg-background/60 dark:bg-background/40 backdrop-blur-md px-6 py-4 rounded-2xl border border-border/50 shadow-lg">
-                <div className="text-3xl font-black text-secondary mb-1">+1M</div>
-                <div className="text-sm font-medium text-foreground/80">ملف تم تحليله</div>
+              <div className="text-center bg-background/80 dark:bg-background/60 backdrop-blur-md px-4 sm:px-6 py-4 rounded-2xl border border-border/50 shadow-lg flex-1 sm:flex-none min-w-[120px]">
+                <div className="text-2xl sm:text-3xl font-black text-secondary mb-1">+1M</div>
+                <div className="text-xs sm:text-sm font-medium text-foreground/80">ملف تم تحليله</div>
               </div>
-              <div className="text-center bg-background/60 dark:bg-background/40 backdrop-blur-md px-6 py-4 rounded-2xl border border-border/50 shadow-lg">
-                <div className="text-3xl font-black text-primary mb-1">99%</div>
-                <div className="text-sm font-medium text-foreground/80">دقة التحليل</div>
+              <div className="text-center bg-background/80 dark:bg-background/60 backdrop-blur-md px-4 sm:px-6 py-4 rounded-2xl border border-border/50 shadow-lg flex-1 sm:flex-none min-w-[120px]">
+                <div className="text-2xl sm:text-3xl font-black text-primary mb-1">99%</div>
+                <div className="text-xs sm:text-sm font-medium text-foreground/80">دقة التحليل</div>
               </div>
             </div>
           </div>
