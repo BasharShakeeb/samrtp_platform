@@ -1,6 +1,10 @@
+"use client"
+
 import { FileText } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 export function Footer() {
+  const { t } = useTranslation()
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,35 +15,35 @@ export function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-foreground to-secondary flex items-center justify-center">
                 <FileText className="w-5 h-5 text-foreground" />
               </div>
-              <span className="text-lg font-bold text-background">مساعد PDF الذكي</span>
+              <span className="text-lg font-bold text-background">{t('nav_brand')}</span>
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
-              منصة متكاملة لتحليل وفهم ملفات PDF باستخدام أحدث تقنيات الذكاء الاصطناعي
+              {t('footer_desc')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-background mb-4">روابط سريعة</h4>
+            <h4 className="font-bold text-background mb-4">{t('footer_links')}</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-background/70 hover:text-background transition-colors text-sm">
-                  الرئيسية
+                  {t('footer_home')}
                 </a>
               </li>
               <li>
                 <a href="#features" className="text-background/70 hover:text-background transition-colors text-sm">
-                  المميزات
+                  {t('footer_features')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-background/70 hover:text-background transition-colors text-sm">
-                  الأسعار
+                  {t('footer_pricing')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-background/70 hover:text-background transition-colors text-sm">
-                  الدعم الفني
+                  {t('footer_support')}
                 </a>
               </li>
             </ul>
@@ -47,21 +51,21 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-bold text-background mb-4">قانوني</h4>
+            <h4 className="font-bold text-background mb-4">{t('footer_legal')}</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-background/70 hover:text-background transition-colors text-sm">
-                  سياسة الخصوصية
+                  {t('footer_privacy')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-background/70 hover:text-background transition-colors text-sm">
-                  شروط الاستخدام
+                  {t('footer_terms')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-background/70 hover:text-background transition-colors text-sm">
-                  سياسة الاسترجاع
+                  {t('footer_refund')}
                 </a>
               </li>
             </ul>
@@ -69,16 +73,16 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-background mb-4">تواصل معنا</h4>
+            <h4 className="font-bold text-background mb-4">{t('footer_contact')}</h4>
             <ul className="space-y-3">
               <li className="text-background/70 text-sm">
-                البريد: info@pdfassist.sa
+                {t('footer_email')}
               </li>
               <li className="text-background/70 text-sm">
-                الهاتف: 920000000
+                {t('footer_phone')}
               </li>
               <li className="text-background/70 text-sm">
-                الرياض، المملكة العربية السعودية
+                {t('footer_address')}
               </li>
             </ul>
 

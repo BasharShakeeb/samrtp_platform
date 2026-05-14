@@ -1,6 +1,10 @@
+"use client"
+
 import { Target, Lightbulb, TrendingUp } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 export function VisionSection() {
+  const { t } = useTranslation()
   return (
     <section id="vision" className="py-24 relative overflow-hidden">
       {/* Background decorations */}
@@ -19,19 +23,19 @@ export function VisionSection() {
                 <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-secondary rounded-full" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-foreground">رؤية السعودية</h3>
-                <p className="text-muted-foreground">نحو مستقبل رقمي مشرق</p>
+                <h3 className="text-2xl font-bold text-foreground">2030</h3>
+                <p className="text-muted-foreground">{t('vision_subtitle')}</p>
               </div>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 leading-tight">
-              نساهم في تحقيق
+              {t('vision_title1')}
               <br />
-              <span className="text-primary">التحول الرقمي</span>
+              <span className="text-primary">{t('vision_title2')}</span>
             </h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              انطلاقاً من رؤية المملكة العربية السعودية 2030، نسعى لتقديم حلول تقنية مبتكرة تدعم التحول الرقمي وتعزز الإنتاجية في جميع القطاعات.
+              {t('vision_desc')}
             </p>
 
             {/* Vision pillars */}
@@ -41,8 +45,8 @@ export function VisionSection() {
                   <Target className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1">مجتمع حيوي</h4>
-                  <p className="text-sm text-muted-foreground">تمكين الأفراد والمؤسسات من الوصول للمعرفة بسهولة</p>
+                  <h4 className="font-bold text-foreground mb-1">{t('vision_1_title')}</h4>
+                  <p className="text-sm text-muted-foreground">{t('vision_1_desc')}</p>
                 </div>
               </div>
 
@@ -51,8 +55,8 @@ export function VisionSection() {
                   <TrendingUp className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1">اقتصاد مزدهر</h4>
-                  <p className="text-sm text-muted-foreground">رفع كفاءة العمل وتوفير الوقت والموارد</p>
+                  <h4 className="font-bold text-foreground mb-1">{t('vision_2_title')}</h4>
+                  <p className="text-sm text-muted-foreground">{t('vision_2_desc')}</p>
                 </div>
               </div>
 
@@ -61,8 +65,8 @@ export function VisionSection() {
                   <Lightbulb className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1">وطن طموح</h4>
-                  <p className="text-sm text-muted-foreground">تبني أحدث التقنيات لبناء مستقبل أفضل</p>
+                  <h4 className="font-bold text-foreground mb-1">{t('vision_3_title')}</h4>
+                  <p className="text-sm text-muted-foreground">{t('vision_3_desc')}</p>
                 </div>
               </div>
             </div>
@@ -85,7 +89,7 @@ export function VisionSection() {
               <div className="relative space-y-4">
                 <div className="bg-card rounded-2xl p-6 shadow-lg border border-border">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm font-medium text-muted-foreground">نسبة الإنجاز</span>
+                    <span className="text-sm font-medium text-muted-foreground">{t('vision_stat_progress')}</span>
                     <span className="text-2xl font-bold text-primary">85%</span>
                   </div>
                   <div className="h-3 bg-muted rounded-full overflow-hidden">
@@ -96,11 +100,11 @@ export function VisionSection() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-card rounded-2xl p-5 shadow-lg border border-border text-center">
                     <div className="text-3xl font-bold text-secondary mb-1">+200</div>
-                    <div className="text-xs text-muted-foreground">جهة حكومية</div>
+                    <div className="text-xs text-muted-foreground">{t('vision_stat_gov')}</div>
                   </div>
                   <div className="bg-card rounded-2xl p-5 shadow-lg border border-border text-center">
                     <div className="text-3xl font-bold text-primary mb-1">+500</div>
-                    <div className="text-xs text-muted-foreground">شركة خاصة</div>
+                    <div className="text-xs text-muted-foreground">{t('vision_stat_private')}</div>
                   </div>
                 </div>
 
@@ -112,20 +116,20 @@ export function VisionSection() {
                       </svg>
                     </div>
                     <div>
-                      <div className="font-semibold text-foreground">التحول الرقمي</div>
-                      <div className="text-xs text-muted-foreground">محرك النمو الاقتصادي</div>
+                      <div className="font-semibold text-foreground">{t('vision_stat_transform')}</div>
+                      <div className="text-xs text-muted-foreground">{t('vision_stat_engine')}</div>
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    نفخر بأن نكون جزءاً من منظومة الابتكار السعودية
+                    {t('vision_stat_proud')}
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -top-4 -left-4 bg-secondary text-secondary-foreground px-5 py-2.5 rounded-full text-sm font-bold shadow-lg">
-              شريك رقمي موثوق
+            <div className="absolute -top-4 -left-4 rtl:-right-4 rtl:-left-auto bg-secondary text-secondary-foreground px-5 py-2.5 rounded-full text-sm font-bold shadow-lg">
+              {t('vision_stat_partner')}
             </div>
           </div>
         </div>

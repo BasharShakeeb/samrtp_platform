@@ -1,3 +1,5 @@
+"use client"
+
 import { 
   Brain, 
   Zap, 
@@ -6,57 +8,59 @@ import {
   FileSearch, 
   MessageSquareText 
 } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 const features = [
   {
     icon: Brain,
-    title: "ذكاء اصطناعي متقدم",
-    description: "نستخدم أحدث تقنيات الذكاء الاصطناعي لفهم وتحليل مستنداتك بدقة عالية",
+    titleKey: "feat_1_title",
+    descKey: "feat_1_desc",
     color: "primary" as const,
   },
   {
     icon: Zap,
-    title: "سرعة فائقة",
-    description: "احصل على إجابات فورية لأسئلتك في ثوانٍ معدودة",
+    titleKey: "feat_2_title",
+    descKey: "feat_2_desc",
     color: "secondary" as const,
   },
   {
     icon: Shield,
-    title: "أمان وخصوصية",
-    description: "ملفاتك محمية بأعلى معايير الأمان والتشفير",
+    titleKey: "feat_3_title",
+    descKey: "feat_3_desc",
     color: "primary" as const,
   },
   {
     icon: Globe,
-    title: "دعم اللغة العربية",
-    description: "مصمم خصيصاً لفهم ومعالجة المحتوى العربي بكفاءة",
+    titleKey: "feat_4_title",
+    descKey: "feat_4_desc",
     color: "secondary" as const,
   },
   {
     icon: FileSearch,
-    title: "تحليل شامل",
-    description: "استخراج المعلومات والبيانات من أي نوع من ملفات PDF",
+    titleKey: "feat_5_title",
+    descKey: "feat_5_desc",
     color: "primary" as const,
   },
   {
     icon: MessageSquareText,
-    title: "محادثة طبيعية",
-    description: "اطرح أسئلتك بلغتك الطبيعية واحصل على إجابات واضحة",
+    titleKey: "feat_6_title",
+    descKey: "feat_6_desc",
     color: "secondary" as const,
   },
 ]
 
 export function FeaturesSection() {
+  const { t } = useTranslation()
   return (
     <section id="features" className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            مميزات <span className="text-primary">استثنائية</span>
+            {t('feat_title1')} <span className="text-primary">{t('feat_title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            نوفر لك أدوات متقدمة تساعدك على الاستفادة القصوى من مستنداتك
+            {t('feat_subtitle')}
           </p>
         </div>
 
@@ -82,10 +86,10 @@ export function FeaturesSection() {
 
                 {/* Content */}
                 <h3 className="text-xl font-bold text-foreground mb-3">
-                  {feature.title}
+                  {t(feature.titleKey)}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
+                  {t(feature.descKey)}
                 </p>
 
                 {/* Hover gradient */}
